@@ -1,0 +1,4 @@
+<section (click)="toggle()">
+    <span [ngClass]="{'on':theme=='light','off':theme!='light'}"><fa-icon [icon]="faLight"></fa-icon></span>
+    <span [ngClass]="{'on':theme=='dark','off':theme!='dark'}"><fa-icon [icon]="faDark"></fa-icon></span>
+</section>

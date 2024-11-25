@@ -1,0 +1,66 @@
+:root{
+    /*
+    Apresenta variáveis para todos os elementos base.
+
+    Utilizar nos componentes com: var(--nome_da_variavel);
+
+    Esses estilos são usados todos por padrão, alguns são sobrescritos quando o tema dark está ativo
+    Compare com o bloco abaixo :root.dark para ver quais valores são alterados.
+    
+    */
+
+    // Cor de fundo padrão
+    --bg_color_default:#F3F3F3;
+    --bg_color_overlap:#F0F0F0;
+
+
+    // Cores de fonte
+    --font_color_default:#333333;
+    --font_color_title:#222222;
+    --font_color_discrete:#555555;
+
+
+    // Colorido
+
+    //Graduação das cores primárias
+    --primary_color_100:#FFECEA;
+    --primary_color_200:#FFD5D0;
+    --primary_color_300:#FFBBB4;
+    --primary_color_400:#FF9F96;
+    --primary_color_500:#FF7F72;
+    --primary_color_600:#E66C60;
+    --primary_color_700:#CC594F;
+    --primary_color_800:#B2473E;
+    --primary_color_900:#99362F;
+
+    //Graduação das cores secundárias
+    --secundary_color_100:#E7F8ED;
+    --secundary_color_200:#C3EDD5;
+    --secundary_color_300:#9FE2BD;
+    --secundary_color_400:#7BD7A5;
+    --secundary_color_500:#28C76F;
+    --secundary_color_600:#20B060;
+    --secundary_color_700:#189951;
+    --secundary_color_800:#107F42;
+    --secundary_color_900:#085F31;
+
+    //Graduação de escala de cinza
+    --grey_color_100:#FAFAFA;
+    --grey_color_200:#E1E1E1;
+    --grey_color_300:#CFCFCF;
+    --grey_color_400:#B4B4B4;
+    --grey_color_500:#999999;
+    --grey_color_600:#7F7F7F;
+    --grey_color_700:#666666;
+    --grey_color_800:#3F3F3F;
+    --grey_color_900:#1C1C1C;
+
+
+}
+
+:root.dark{
+    --bg_color_default:#333333;
+    --bg_color_overlap:#555555;
+
+    --font_color_default:#FAFAFA;
+}

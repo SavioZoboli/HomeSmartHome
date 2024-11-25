@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('assets/styles/theme.scss');
+
+//Resetando os padrões do HTML e setando tamanho padrão da página
+body,html{
+    padding:0;
+    margin:0;
+    width:100vw;
+    height:100%;
+}
