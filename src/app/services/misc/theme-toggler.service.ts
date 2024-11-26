@@ -12,7 +12,7 @@ export class ThemeTogglerService {
 //Construtor do serviço
   constructor(private cookieService:CookieService) {
     //Busca o tema nos cookies e, caso não possua o tema, usa o claro
-    const initialTheme = this.cookieService.get('theme')=='light'?'light':'dark';
+    const initialTheme = this.cookieService.get('theme')==='light'?'light':'dark';
     //Adiciona o valor do tema no objeto observavel
     this.themeSubject = new BehaviorSubject<string>(initialTheme);
     //Executa a função de aplicação do tema
@@ -40,9 +40,8 @@ export class ThemeTogglerService {
     }
    }
 
-
-  
-
-
+   getTheme():string{
+    return this.themeSubject.getValue()
+   }
 
 }
