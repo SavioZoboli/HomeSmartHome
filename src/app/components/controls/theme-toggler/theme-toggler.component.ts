@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
-import { ThemeEnum } from '../../../../enums/themes.enum';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-theme-toggler',
@@ -12,14 +12,24 @@ export class ThemeTogglerComponent implements OnInit{
   faLight = faSun
   faDark = faMoon
 
-  theme!:ThemeEnum
+  theme!:'dark'|'light'
+
+  constructor(private cookieService:CookieService){
+
+  }
 
   ngOnInit(): void {
-      this.toggle()
+    this.theme = this.cookieService.get('theme')=='light'?'light':'dark';
+      this.applyTheme()
   }
 
   toggle(){
-    this.theme = this.theme=='light'?ThemeEnum.DARK:ThemeEnum.LIGHT;
+    this.theme = this.theme=='light'?'dark':'light';
+    this.cookieService.set('theme',this.theme);
+    this.applyTheme()
+  }
+
+  applyTheme(){
     if(this.theme == 'dark'){
       document.documentElement.classList.add('dark')
     }else{
