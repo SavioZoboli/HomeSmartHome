@@ -1,39 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 import { CookieService } from 'ngx-cookie-service';
+import { ThemeTogglerService } from '../../../services/misc/theme-toggler.service';
 
 @Component({
   selector: 'app-theme-toggler',
   templateUrl: './theme-toggler.component.html',
   styleUrl: './theme-toggler.component.scss'
 })
-export class ThemeTogglerComponent implements OnInit{
+export class ThemeTogglerComponent{
 
   faLight = faSun
   faDark = faMoon
 
-  theme!:'dark'|'light'
+  theme!:string
 
-  constructor(private cookieService:CookieService){
-
-  }
-
-  ngOnInit(): void {
-    this.theme = this.cookieService.get('theme')=='light'?'light':'dark';
-      this.applyTheme()
+  constructor(private themeTogglerService:ThemeTogglerService){
+    this.themeTogglerService.theme$.subscribe({
+      next:(theme:string)=>{
+        console.log(theme);
+        this.theme = theme;
+      }
+    })
   }
 
   toggle(){
-    this.theme = this.theme=='light'?'dark':'light';
-    this.cookieService.set('theme',this.theme);
-    this.applyTheme()
+    let nextTheme:'light'|'dark' = this.theme == 'light'?'dark':'light';
+    this.themeTogglerService.setTheme(nextTheme)
   }
 
-  applyTheme(){
-    if(this.theme == 'dark'){
-      document.documentElement.classList.add('dark')
-    }else{
-      document.documentElement.classList.remove('dark')
-    }
-  }
+
+
 }
