@@ -1,0 +1,24 @@
+
+h1{
+    font-family: var(--font-face-title);
+    color:var(--primary-color-700);
+    font-size: 2em;
+}
+
+h2{
+    font-family: var(--font-face-title);
+    color: var(--grey-color-600);
+    font-weight: normal;
+    font-size: 1.4em;
+}
+
+p{
+    font-family: var(--font-face-default);
+    font-size: 1em;
+}
+
+span{
+    font-family: var(--font-face-discrete);
+    color:var(--grey-color-400);
+    font-size: 0.8em;
+}
