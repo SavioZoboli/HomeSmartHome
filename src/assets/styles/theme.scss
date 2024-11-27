@@ -13,6 +13,10 @@
     --bg-color-default:#F3F3F3;
     --bg-color-overlap:#F0F0F0;
 
+    //RGBA padrões para fundo
+    --bg-color-overlay-rgba: rgba(100,100,100,0.5);
+    --bg-color-overlap-rgba: rgba(230,230,230,0.5);
+
 
     // Cores de fonte
     --font-color-default:#333333;
@@ -45,15 +49,15 @@
     --secundary-color-900:#085F31;
 
     //Graduação de escala de cinza
-    --grey-color-100:#FAFAFA;
-    --grey-color-200:#E1E1E1;
-    --grey-color-300:#CFCFCF;
-    --grey-color-400:#B4B4B4;
-    --grey-color-500:#999999;
-    --grey-color-600:#7F7F7F;
-    --grey-color-700:#666666;
-    --grey-color-800:#3F3F3F;
-    --grey-color-900:#1C1C1C;
+    --grey-color-100:#f9f9f9;
+    --grey-color-200:#ececec;
+    --grey-color-300:#dcdcdc;
+    --grey-color-400:#c4c4c4;
+    --grey-color-500:#a9a9a9;
+    --grey-color-600:#8e8e8e;
+    --grey-color-700:#6e6e6e;
+    --grey-color-800:#4e4e4e;
+    --grey-color-900:#333333;
 
     //Estilos de fonte
     --font-face-title:montserrat;
@@ -63,8 +67,32 @@
 }
 
 :root.dark{
-    --bg-color-default:#333333;
-    --bg-color-overlap:#555555;
+    //A classe Dark é colocada no root do DOM para sobrescrever as variáveis
+    //do tema
 
+    //Cores de fundo
+    --bg-color-default:#333333;
+    --bg-color-overlap:#222222;
+
+    //RGBA padrões para fundo
+    --bg-color-overlay-rgba: rgba(0,0,0,0.2);
+    --bg-color-overlap-rgba: rgba(30,30,30,0.5);
+
+    //Cor da fonte
     --font-color-default:#FAFAFA;
+
+    //No tema escuro a escala é inversa
+    --grey-color-900:#e2e2e2;
+    --grey-color-800:#c2c2c2;
+    --grey-color-700:#9c9c9c;
+    --grey-color-600:#7c7c7c;
+    --grey-color-500:#5c5c5c;
+    --grey-color-400:#4c4c4c;
+    --grey-color-300:#3c3c3c;
+    --grey-color-200:#2c2c2c;
+    --grey-color-100:#1C1C1C;
+
+    //Cor padrão para branco e preto
+    --white:#FAFAFA;
+    --black:#1C1C1C;
 }

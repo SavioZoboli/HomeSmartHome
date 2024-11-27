@@ -21,3 +21,33 @@
         cursor: default;
     }
 }
+
+.cta-tertiary{
+    width:60%;
+    border:0;
+    background-color: var(--grey-color-400);
+    padding:10px;
+    border-radius: 5px;
+    color:var(--font-color-default);
+    fa-icon{
+        padding:0 10px 0 0;
+    }
+    &:hover{
+        background-color: var(--grey-color-500);
+    }
+    &:active{
+        background-color: var(--grey-color-600);
+        transform: scale(0.95);
+    }
+
+}
+
+a{
+    color:var(--secundary-color-600);
+    text-decoration: none;
+    font-size: 0.8em;
+    font-family: var(--font-face-default);
+    &:hover{
+        color:var(--secundary-color-700);
+    }
+}

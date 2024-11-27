@@ -1,0 +1,26 @@
+<section class="form-login">
+    <img [src]="(logo|async)" alt="Logo HomeSmartHome">
+    <form>
+        <div class="form-control">
+            <label>Usuário</label>
+            <div class="fake-input">
+                <label><fa-icon [icon]="faUser"></fa-icon></label>
+                <input>
+            </div>
+        </div>
+        <div class="form-control">
+            <label>Senha</label>
+            <div class="fake-input">
+                <label><fa-icon [icon]="faPassword"></fa-icon></label>
+                <input>
+            </div>
+            <a routerLink="/notfound">Esqueceu a senha?</a>
+        </div>
+        <button class="cta-primario">Entrar</button>
+    </form>
+    <hr />
+    <div class="button-wrapper">
+        <button class="cta-tertiary"><fa-icon [icon]="faGoogle"></fa-icon>Entrar com Google</button>
+        <button class="cta-tertiary"><fa-icon [icon]="faApple"></fa-icon>Entrar com AppleID</button>
+    </div>
+</section>
