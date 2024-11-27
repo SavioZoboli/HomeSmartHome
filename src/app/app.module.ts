@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthComponent } from './pages/auth/auth.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
+import { NotFoundComponent } from './pages/error/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SignupComponent } from './pages/auth/signup/signup.component';
     ThemeTogglerComponent,
     LoginComponent,
     AuthComponent,
-    SignupComponent
+    SignupComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
