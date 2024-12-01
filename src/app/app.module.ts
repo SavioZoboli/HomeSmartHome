@@ -10,6 +10,10 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
 import { NotFoundComponent } from './pages/error/not-found/not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,16 @@ import { NotFoundComponent } from './pages/error/not-found/not-found.component';
     LoginComponent,
     AuthComponent,
     SignupComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DashboardComponent,
+    NavigationComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

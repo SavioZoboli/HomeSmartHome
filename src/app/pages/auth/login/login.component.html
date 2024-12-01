@@ -1,22 +1,24 @@
 <section class="form-login">
-    <img [src]="(logo|async)" alt="Logo HomeSmartHome">
-    <form>
+    <div class="logo-wrapper">
+        <app-logo></app-logo>
+    </div>
+    <form [formGroup]="form">
         <div class="form-control">
-            <label>Usuário</label>
+            <label for="usuario">Usuário</label>
             <div class="fake-input">
-                <label><fa-icon [icon]="faUser"></fa-icon></label>
-                <input>
+                <label for="usuario"><fa-icon [icon]="faUser"></fa-icon></label>
+                <input type="text" name="usaurio" formControlName="usuario" id="usuario">
             </div>
         </div>
         <div class="form-control">
-            <label>Senha</label>
+            <label for="senha">Senha</label>
             <div class="fake-input">
-                <label><fa-icon [icon]="faPassword"></fa-icon></label>
-                <input>
+                <label for="senha"><fa-icon [icon]="faPassword"></fa-icon></label>
+                <input type="password" name="senha" formControlName="senha" id="senha">
             </div>
             <a routerLink="/forgotpass">Esqueceu a senha?</a>
         </div>
-        <button class="cta-primario">Entrar</button>
+        <button class="cta-primario" [disabled]="form.invalid" (click)="submitForm()">Entrar</button>
     </form>
     <hr />
     <div class="button-wrapper">

@@ -51,3 +51,20 @@ a{
         color:var(--secundary-color-700);
     }
 }
+
+.fab{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    border:0;
+    background-color: var(--grey-color-200);
+    color:var(--font-color-default);
+    &:hover{
+        background-color: var(--grey-color-300);
+        cursor: pointer;
+    }
+    &:active{
+        background-color: var(--grey-color-400);
+        cursor: pointer;
+    }
+}

@@ -11,7 +11,7 @@
 
     // Cor de fundo padrão
     --bg-color-default:#F3F3F3;
-    --bg-color-overlap:#F0F0F0;
+    --bg-color-overlap:#EAEAEA;
 
     //RGBA padrões para fundo
     --bg-color-overlay-rgba: rgba(100,100,100,0.5);
@@ -64,6 +64,9 @@
     --font-face-default:poppins-regular;
     --font-face-discrete:poppins-light;
 
+    //Cor padrão para branco e preto
+    --white:#FAFAFA;
+    --black:#1C1C1C;
 }
 
 :root.dark{
@@ -71,8 +74,8 @@
     //do tema
 
     //Cores de fundo
-    --bg-color-default:#333333;
-    --bg-color-overlap:#222222;
+    --bg-color-default:#0a0a0a;
+    --bg-color-overlap:#1a1a1a;
 
     //RGBA padrões para fundo
     --bg-color-overlay-rgba: rgba(0,0,0,0.2);
@@ -81,7 +84,31 @@
     //Cor da fonte
     --font-color-default:#FAFAFA;
 
-    //No tema escuro a escala é inversa
+    //No tema escuro as escalas são inversas
+    
+    //Graduação das cores primárias
+    --primary-color-900:#FFECEA;
+    --primary-color-800:#FFD5D0;
+    --primary-color-700:#FFBBB4;
+    --primary-color-600:#FF9F96;
+    --primary-color-500:#FF7F72;
+    --primary-color-400:#E66C60;
+    --primary-color-300:#CC594F;
+    --primary-color-200:#B2473E;
+    --primary-color-100:#99362F;
+
+    //Graduação das cores secundárias
+    --secundary-color-900:#E7F8ED;
+    --secundary-color-800:#C3EDD5;
+    --secundary-color-700:#9FE2BD;
+    --secundary-color-600:#7BD7A5;
+    --secundary-color-500:#28C76F;
+    --secundary-color-400:#20B060;
+    --secundary-color-300:#189951;
+    --secundary-color-200:#107F42;
+    --secundary-color-100:#085F31;
+
+    //Graduação da escala de cinza
     --grey-color-900:#e2e2e2;
     --grey-color-800:#c2c2c2;
     --grey-color-700:#9c9c9c;

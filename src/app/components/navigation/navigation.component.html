@@ -1,0 +1,32 @@
+<section
+ class="navigation-bar"
+ [ngClass]="{'closed':estado_nav=='fechado','opened':estado_nav=='aberto','default':estado_nav=='inicial'}"
+ >
+    
+    <header>
+        <div class="logo-wrapper">
+            <app-logo [tipo]="'sem_escrita'"></app-logo>
+        </div>
+        <button class="toggler" (click)="toggle()"><fa-icon [icon]="faToggler"></fa-icon></button>
+    </header>
+    
+    
+    <nav>
+        <a class="active"><fa-icon [icon]="faDashboard"></fa-icon><span>Dashboard</span></a>
+        <hr>
+        <a><fa-icon [icon]="faAquaHub"></fa-icon><span>AquaHub</span></a>
+        <a><fa-icon [icon]="faSparkMeter"></fa-icon><span>SparkMeter</span></a>
+        <a><fa-icon [icon]="faGoodLock"></fa-icon><span>GoodLock</span></a>
+    </nav>
+    <section class="profile">
+        <div class="img">
+            <button><fa-icon [icon]="faConfig"></fa-icon></button>
+        </div>
+        <article>
+            <p>Sávio Zoboli</p>
+            <strong>Rua Birmânia, 175</strong>
+            
+        </article>
+    </section>
+    
+</section>
