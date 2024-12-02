@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faChartBar } from '@fortawesome/free-regular-svg-icons';
-import { faAnglesRight, faArrowRightFromBracket, faArrowRightToBracket, faBolt, faChartColumn, faChevronLeft, faChevronRight, faCog, faDroplet, faKey } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesRight, faArrowRightFromBracket, faArrowRightToBracket, faBolt, faChartColumn, faChevronLeft, faChevronRight, faCog, faCogs, faDroplet, faKey, faListUl, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
@@ -15,7 +15,11 @@ export class NavigationComponent {
   //Abre e fecha o menu de navegação
   estado_nav:'inicial'|'aberto'|'fechado' = 'fechado';
 
-  toggle(){
+  toggle(estado?:boolean){
+    if(estado){
+      this.estado_nav = estado?'aberto':'fechado';
+      return;
+    }
     if(this.estado_nav!='aberto'){
       this.estado_nav = 'aberto';
       return;
@@ -28,6 +32,11 @@ export class NavigationComponent {
   faAquaHub = faDroplet
   faSparkMeter = faBolt
   faGoodLock = faKey
+
+  faAdministracao = faCogs
+  faUsuario = faUser
+  faMenu = faListUl
+  faAcesso = faLock
 
 
   //Icone de configurações
