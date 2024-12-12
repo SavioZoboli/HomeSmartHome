@@ -6,6 +6,7 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { NotFoundComponent } from './pages/error/not-found/not-found.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CadClienteComponent } from './pages/vendas/cad-cliente/cad-cliente.component';
+import { AquahubDashboardComponent } from './modulos/aquahub/aquahub-dashboard/aquahub-dashboard.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'auth',pathMatch:'full'},
@@ -13,6 +14,13 @@ const routes: Routes = [
 
   //Dashboard geral
   {path:'dashboard',component:DashboardComponent},
+
+  //AquaHub
+  //Tratado em outro módulo, rota abaixo envia o pacote de roteamento para o roteamento
+  //Do aquahub module
+  {path:'aquahub',children:[
+    {path:'dashboard',component:AquahubDashboardComponent}
+  ]},
 
   //Páginas de cadastro de clientes
   {path:'cadCliente',component:CadClienteComponent},

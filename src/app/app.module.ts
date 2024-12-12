@@ -31,6 +31,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { FormCadClienteComponent } from './pages/vendas/cad-cliente/form-cad-cliente/form-cad-cliente.component';
 import { ReportModulosClienteComponent } from './pages/vendas/cad-cliente/report-modulos-cliente/report-modulos-cliente.component';
 import { FormCadUsuarioComponent } from './pages/vendas/cad-cliente/form-cad-usuario/form-cad-usuario.component';
+import { AquahubDashboardComponent } from './modulos/aquahub/aquahub-dashboard/aquahub-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { FormCadUsuarioComponent } from './pages/vendas/cad-cliente/form-cad-usu
     CadClienteComponent,
     FormCadClienteComponent,
     ReportModulosClienteComponent,
-    FormCadUsuarioComponent
+    FormCadUsuarioComponent,
+    AquahubDashboardComponent
   ],
   imports: [
     BrowserModule,

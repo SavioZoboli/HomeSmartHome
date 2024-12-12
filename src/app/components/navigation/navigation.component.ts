@@ -69,7 +69,7 @@ export class NavigationComponent {
       nome:'AquaHub',
       codigo:'AQH',
       tipo:TipoMenu.DASHBOARD,
-      rota:'/aquahub',
+      rota:'/aquahub/dashboard',
       icone:faDroplet
     },{
       id:1,
