@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faChartBar } from '@fortawesome/free-regular-svg-icons';
-import { faAnglesRight, faArrowRightFromBracket, faArrowRightToBracket, faBolt, faChartColumn, faChevronLeft, faChevronRight, faCog, faCogs, faDroplet, faKey, faListUl, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesRight, faArrowRightFromBracket, faArrowRightToBracket, faBolt, faChartColumn, faChevronLeft, faChevronRight, faCog, faCogs, faDollar, faDroplet, faKey, faListUl, faLock, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
@@ -25,6 +25,10 @@ export class NavigationComponent {
       return;
     }
     this.estado_nav ='fechado';
+    let details = document.querySelectorAll('details')
+    details.forEach(detail=>{
+      detail.removeAttribute('open');
+    })
   }
 
   //Icones das páginas
@@ -34,13 +38,18 @@ export class NavigationComponent {
   faGoodLock = faKey
 
   faAdministracao = faCogs
-  faUsuario = faUser
   faMenu = faListUl
   faAcesso = faLock
+
+  faVendas = faDollar
+  faCliente = faUsers
 
 
   //Icone de configurações
   faConfig = faCog
+
+
+  //Menu dinamico base ##SERÁ SUBSTITUIDO PELO RETORNO DO BANCO DE DADOS ##
 
 
 }

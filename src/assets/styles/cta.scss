@@ -42,6 +42,27 @@
 
 }
 
+.cta-form{
+    padding:10px 15px 10px 15px;
+    font-size: 0.8em;
+    font-family: var(--font-face-default);
+    border:0;
+    border-radius: 5px;
+    &:active:enabled{
+        background-color: var(--secundary-color-700);
+        transform: scale(0.95);
+        cursor: pointer;
+    }
+    &:hover{
+        background-color: var(--secundary-color-600);
+        cursor: pointer;
+    }
+    &:disabled{
+        background-color:var(--grey-color-500);
+        cursor: default;
+    }
+}
+
 a{
     color:var(--secundary-color-600);
     text-decoration: none;
@@ -53,8 +74,8 @@ a{
 }
 
 .fab{
-    width:30px;
-    height:30px;
+    width:40px;
+    height:40px;
     border-radius: 50%;
     border:0;
     background-color: var(--grey-color-200);

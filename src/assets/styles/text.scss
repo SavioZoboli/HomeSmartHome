@@ -21,10 +21,19 @@ span{
     font-family: var(--font-face-discrete);
     color:var(--grey-color-400);
     font-size: 0.8em;
+    &.err{
+        color:var(--error-font-color);
+    }
 }
 
 strong{
     font-size: 0.7em;
     font-family: var(--font-face-default);
     color:var(--grey-color-500);
+}
+
+label{
+    font-size: 0.7em;
+    font-family: var(--font-face-default);
+    color:var(--font-color-default)
 }

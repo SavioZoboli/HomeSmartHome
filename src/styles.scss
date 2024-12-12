@@ -1,22 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'assets/styles/theme.scss' as custom-theme;
+@use "@angular/material" as mat;
 
-@import url('assets/styles/theme.scss');
-@import url('assets/styles/fonts.scss');
+@import url("assets/styles/theme.scss");
+@import url("assets/styles/fonts.scss");
 
-@import url('assets/styles/text.scss');
-@import url('assets/styles/cta.scss');
+@import url("assets/styles/text.scss");
+@import url("assets/styles/cta.scss");
 
-//Resetando os padrões do HTML e setando tamanho padrão da página
-body,html{
-    padding:0;
-    margin:0;
-    width:100vw;
-    height:100%;
-    background-color: var(--bg-color-default);
-    color:var(--font-color-default)
+//Aplicar tema customizado ao Angular Material
+@include mat.core();
+
+:root {
+  @include mat.all-component-themes(custom-theme.$light-theme);
 }
 
-h1,h2,p{
-    padding:0;
-    margin:0;
+:root.dark {
+  @include mat.all-component-themes(custom-theme.$dark-theme);
+}
+
+//@include mat.all-component-themes(custom-theme.$app-theme);
+
+//Resetando os padrões do HTML e setando tamanho padrão da página
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--bg-color-default);
+  color: var(--font-color-default);
+  font-family: var(--font-face-default),'roboto';
+  font-size: 16px;
+}
+
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.page-area {
+  width: calc(89vw - 20px);
+  height: calc(100vh - 20px);
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+mat-tab-body{
+  padding:10px;
 }

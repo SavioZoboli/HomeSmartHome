@@ -1,5 +1,94 @@
-:root{
-    /*
+@use "@angular/material" as mat;
+
+$coral-palette: (
+  50: #e0f1ff,
+  100: #b3dbff,
+  200: #80c4ff,
+  300: #4eaeff,
+  400: #2696e6,
+  500: #0057b7,
+  600: #004a9a,
+  700: #003d7e,
+  800: #002f61,
+  900: #001f41,
+  A100: #80e1ff,
+  A200: #4ec9ff,
+  A400: #2690ff,
+  contrast: (
+    50: #1c1c1c,
+    100: #1c1c1c,
+    200: #1c1c1c,
+    300: #1c1c1c,
+    400: #1c1c1c,
+    500: #1c1c1c,
+    600: #1c1c1c,
+    700: #1c1c1c,
+    800: #1c1c1c,
+    900: #1c1c1c,
+    A100: #1c1c1c,
+    A200: #1c1c1c,
+    A400: #1c1c1c,
+  ),
+);
+
+$mint-palette: (
+  50: #e7f8ed,
+  100: #e7f8ed,
+  200: #c3edd5,
+  300: #9fe2bd,
+  400: #7bd7a5,
+  500: #28c76f,
+  600: #20b060,
+  700: #189951,
+  800: #107f42,
+  900: #085f31,
+  A100: #a2f3c4,  
+A200: #6ae8a3,  
+A400: #42d88b,  
+  contrast: (
+    50: #1c1c1c,
+    100: #1c1c1c,
+    200: #1c1c1c,
+    300: #1c1c1c,
+    400: #1c1c1c,
+    500: #1c1c1c,
+    600: #1c1c1c,
+    700: #1c1c1c,
+    800: #1c1c1c,
+    900: #1c1c1c,
+    A100: white,
+    A200: white,
+    A400: white,
+  ),
+);
+
+$my-app-primary: mat.define-palette($coral-palette);
+$my-app-accent: mat.define-palette($mint-palette, A200, A100, A400);
+
+$my-app-warn: mat.define-palette(mat.$red-palette);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-app-primary,
+      accent: $my-app-accent,
+      warn: $my-app-warn,
+    ),
+  )
+);
+
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-app-primary,
+      accent: $my-app-accent,
+      warn: $my-app-warn,
+    ),
+  )
+);
+
+:root {
+  /*
     Apresenta variáveis para todos os elementos base.
 
     Utilizar nos componentes com: var(--nome-da-variavel);
@@ -9,117 +98,194 @@
     
     */
 
-    // Cor de fundo padrão
-    --bg-color-default:#F3F3F3;
-    --bg-color-overlap:#EAEAEA;
+  // Cor de fundo padrão
+  --bg-color-default: #f3f3f3;
+  --bg-color-overlap: #eaeaea;
 
-    //RGBA padrões para fundo
-    --bg-color-overlay-rgba: rgba(100,100,100,0.5);
-    --bg-color-overlap-rgba: rgba(230,230,230,0.5);
+  //RGBA padrões para fundo
+  --bg-color-overlay-rgba: rgba(100, 100, 100, 0.5);
+  --bg-color-overlap-rgba: rgba(230, 230, 230, 0.5);
 
+  // Cores de fonte
+  --font-color-default: #333333;
+  --font-color-title: #222222;
+  --font-color-discrete: #555555;
 
-    // Cores de fonte
-    --font-color-default:#333333;
-    --font-color-title:#222222;
-    --font-color-discrete:#555555;
+  // Colorido
 
+  //Graduação das cores primárias
+  --primary-color-50: #e0f1ff; // Tonalidade muito clara
+  --primary-color-100: #b3dbff; // Tom claro
+  --primary-color-200: #80c4ff; // Tom mais vibrante claro
+  --primary-color-300: #4eaeff; // Azul vibrante
+  --primary-color-400: #2696e6; // Azul médio mais claro
+  --primary-color-500: #0057b7; // Azul principal (referência)
+  --primary-color-600: #004a9a; // Azul escuro vibrante
+  --primary-color-700: #003d7e; // Azul mais profundo
+  --primary-color-800: #002f61; // Azul escuro intenso
+  --primary-color-900: #001f41; // Azul muito escuro
 
-    // Colorido
+  //Graduação das cores secundárias
+  --secundary-color-100: #e7f8ed;
+  --secundary-color-200: #c3edd5;
+  --secundary-color-300: #9fe2bd;
+  --secundary-color-400: #7bd7a5;
+  --secundary-color-500: #28c76f;
+  --secundary-color-600: #20b060;
+  --secundary-color-700: #189951;
+  --secundary-color-800: #107f42;
+  --secundary-color-900: #085f31;
 
-    //Graduação das cores primárias
-    --primary-color-100:#FFECEA;
-    --primary-color-200:#FFD5D0;
-    --primary-color-300:#FFBBB4;
-    --primary-color-400:#FF9F96;
-    --primary-color-500:#FF7F72;
-    --primary-color-600:#E66C60;
-    --primary-color-700:#CC594F;
-    --primary-color-800:#B2473E;
-    --primary-color-900:#99362F;
+  //Graduação de escala de cinza
+  --grey-color-100: #f9f9f9;
+  --grey-color-200: #ececec;
+  --grey-color-300: #dcdcdc;
+  --grey-color-400: #c4c4c4;
+  --grey-color-500: #a9a9a9;
+  --grey-color-600: #8e8e8e;
+  --grey-color-700: #6e6e6e;
+  --grey-color-800: #4e4e4e;
+  --grey-color-900: #333333;
 
-    //Graduação das cores secundárias
-    --secundary-color-100:#E7F8ED;
-    --secundary-color-200:#C3EDD5;
-    --secundary-color-300:#9FE2BD;
-    --secundary-color-400:#7BD7A5;
-    --secundary-color-500:#28C76F;
-    --secundary-color-600:#20B060;
-    --secundary-color-700:#189951;
-    --secundary-color-800:#107F42;
-    --secundary-color-900:#085F31;
+  //Estilos de fonte
+  --font-face-title: montserrat;
+  --font-face-default: poppins-regular;
+  --font-face-discrete: poppins-light;
 
-    //Graduação de escala de cinza
-    --grey-color-100:#f9f9f9;
-    --grey-color-200:#ececec;
-    --grey-color-300:#dcdcdc;
-    --grey-color-400:#c4c4c4;
-    --grey-color-500:#a9a9a9;
-    --grey-color-600:#8e8e8e;
-    --grey-color-700:#6e6e6e;
-    --grey-color-800:#4e4e4e;
-    --grey-color-900:#333333;
+  //Cor padrão para branco e preto
+  --white: #fafafa;
+  --black: #1c1c1c;
 
-    //Estilos de fonte
-    --font-face-title:montserrat;
-    --font-face-default:poppins-regular;
-    --font-face-discrete:poppins-light;
+  //Notificação
+  /* Cores de erro */
+  --error-color-300: #e57373;
+  --error-color-400: #ef5350;
+  --error-color-500: #f44336;
+  --error-color-600: #e53935;
+  --error-color-700: #d32f2f;
 
-    //Cor padrão para branco e preto
-    --white:#FAFAFA;
-    --black:#1C1C1C;
+  /* Cores de aviso */
+  --warn-color-300: #ffb74d;
+  --warn-color-400: #ffa726;
+  --warn-color-500: #ff9800;
+  --warn-color-600: #fb8c00;
+  --warn-color-700: #f57c00;
+
+  /* Cores de sucesso */
+  --success-color-300: #81c784;
+  --success-color-400: #66bb6a;
+  --success-color-500: #4caf50;
+  --success-color-600: #43a047;
+  --success-color-700: #388e3c;
+
+  /* Cores de informação */
+  --info-color-300: #64b5f6;
+  --info-color-400: #42a5f5;
+  --info-color-500: #2196f3;
+  --info-color-600: #1e88e5;
+  --info-color-700: #1976d2;
+
+  .green {
+    background-color: var(--success-color-300) !important;
+    color: var(--font-color-default) !important;
+  }
+
+  .red {
+    background-color: var(--error-color-300) !important;
+    color: var(--font-color-default) !important;
+  }
 }
 
-:root.dark{
-    //A classe Dark é colocada no root do DOM para sobrescrever as variáveis
-    //do tema
+:root.dark {
+  //A classe Dark é colocada no root do DOM para sobrescrever as variáveis
+  //do tema
 
-    //Cores de fundo
-    --bg-color-default:#0a0a0a;
-    --bg-color-overlap:#1a1a1a;
+  //Cores de fundo
+  --bg-color-default: #1c1c1c;
+  --bg-color-overlap: #2c2c2c;
 
-    //RGBA padrões para fundo
-    --bg-color-overlay-rgba: rgba(0,0,0,0.2);
-    --bg-color-overlap-rgba: rgba(30,30,30,0.5);
+  //RGBA padrões para fundo
+  --bg-color-overlay-rgba: rgba(0, 0, 0, 0.2);
+  --bg-color-overlap-rgba: rgba(30, 30, 30, 0.5);
 
-    //Cor da fonte
-    --font-color-default:#FAFAFA;
+  //Cor da fonte
+  --font-color-default: #fafafa;
 
-    //No tema escuro as escalas são inversas
-    
-    //Graduação das cores primárias
-    --primary-color-900:#FFECEA;
-    --primary-color-800:#FFD5D0;
-    --primary-color-700:#FFBBB4;
-    --primary-color-600:#FF9F96;
-    --primary-color-500:#FF7F72;
-    --primary-color-400:#E66C60;
-    --primary-color-300:#CC594F;
-    --primary-color-200:#B2473E;
-    --primary-color-100:#99362F;
+  //No tema escuro as escalas são inversas
 
-    //Graduação das cores secundárias
-    --secundary-color-900:#E7F8ED;
-    --secundary-color-800:#C3EDD5;
-    --secundary-color-700:#9FE2BD;
-    --secundary-color-600:#7BD7A5;
-    --secundary-color-500:#28C76F;
-    --secundary-color-400:#20B060;
-    --secundary-color-300:#189951;
-    --secundary-color-200:#107F42;
-    --secundary-color-100:#085F31;
+  //Graduação das cores primárias
+  --primary-color-900: #b3dbff; // Tom claro
+  --primary-color-800: #80c4ff; // Tom mais vibrante claro
+  --primary-color-700: #4eaeff; // Azul vibrante
+  --primary-color-600: #2696e6; // Azul médio mais claro
+  --primary-color-500: #0057b7; // Azul principal (referência)
+  --primary-color-400: #004a9a; // Azul escuro vibrante
+  --primary-color-300: #003d7e; // Azul mais profundo
+  --primary-color-200: #002f61; // Azul escuro intenso
+  --primary-color-10: #001f41; // Azul muito escuro
 
-    //Graduação da escala de cinza
-    --grey-color-900:#e2e2e2;
-    --grey-color-800:#c2c2c2;
-    --grey-color-700:#9c9c9c;
-    --grey-color-600:#7c7c7c;
-    --grey-color-500:#5c5c5c;
-    --grey-color-400:#4c4c4c;
-    --grey-color-300:#3c3c3c;
-    --grey-color-200:#2c2c2c;
-    --grey-color-100:#1C1C1C;
+  //Graduação das cores secundárias
+  --secundary-color-900: #e7f8ed;
+  --secundary-color-800: #c3edd5;
+  --secundary-color-700: #9fe2bd;
+  --secundary-color-600: #7bd7a5;
+  --secundary-color-500: #28c76f;
+  --secundary-color-400: #20b060;
+  --secundary-color-300: #189951;
+  --secundary-color-200: #107f42;
+  --secundary-color-100: #085f31;
 
-    //Cor padrão para branco e preto
-    --white:#FAFAFA;
-    --black:#1C1C1C;
+  //Graduação da escala de cinza
+  --grey-color-900: #e2e2e2;
+  --grey-color-800: #c2c2c2;
+  --grey-color-700: #9c9c9c;
+  --grey-color-600: #7c7c7c;
+  --grey-color-500: #5c5c5c;
+  --grey-color-400: #4c4c4c;
+  --grey-color-300: #3c3c3c;
+  --grey-color-200: #2c2c2c;
+  --grey-color-100: #1c1c1c;
+
+  //Cor padrão para branco e preto
+  --white: #fafafa;
+  --black: #1c1c1c;
+
+  //Notificação
+  /* Cores de erro */
+  --error-color-700: #e57373;
+  --error-color-600: #ef5350;
+  --error-color-500: #f44336;
+  --error-color-400: #e53935;
+  --error-color-300: #d32f2f;
+
+  /* Cores de aviso */
+  --warn-color-700: #ffb74d;
+  --warn-color-600: #ffa726;
+  --warn-color-500: #ff9800;
+  --warn-color-400: #fb8c00;
+  --warn-color-300: #f57c00;
+
+  /* Cores de sucesso */
+  --success-color-700: #81c784;
+  --success-color-600: #66bb6a;
+  --success-color-500: #4caf50;
+  --success-color-400: #43a047;
+  --success-color-300: #388e3c;
+
+  /* Cores de informação */
+  --info-color-700: #64b5f6;
+  --info-color-600: #42a5f5;
+  --info-color-500: #2196f3;
+  --info-color-400: #1e88e5;
+  --info-color-300: #1976d2;
+
+  .green {
+    background-color: var(--success-color-700) !important;
+    color: var(--font-color-default) !important;
+  }
+
+  .red {
+    background-color: var(--error-color-700) !important;
+    color: var(--font-color-default) !important;
+  }
 }

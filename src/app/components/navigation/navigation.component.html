@@ -5,14 +5,14 @@
     
     <header>
         <div class="logo-wrapper">
-            <app-logo [tipo]="'sem_escrita'"></app-logo>
+            <app-logo></app-logo>
         </div>
         <button class="toggler" (click)="toggle()"><fa-icon [icon]="faToggler"></fa-icon></button>
     </header>
     
     
     <nav>
-        <a class="active"><fa-icon [icon]="faDashboard"></fa-icon><span>Dashboard</span></a>
+        <a routerLink="/dashboard"><fa-icon [icon]="faDashboard"></fa-icon><span>Dashboard</span></a>
         <a><fa-icon [icon]="faAquaHub"></fa-icon><span>AquaHub</span></a>
         <a><fa-icon [icon]="faSparkMeter"></fa-icon><span>SparkMeter</span></a>
         <a><fa-icon [icon]="faGoodLock"></fa-icon><span>GoodLock</span></a>
@@ -20,9 +20,15 @@
         <details>
             <summary (click)="toggle(true)"><fa-icon [icon]="faAdministracao"></fa-icon><span>Administração</span></summary>
             <div>
-                <a><fa-icon [icon]="faUsuario"></fa-icon>Usuário</a>
                 <a><fa-icon [icon]="faMenu"></fa-icon>Menu</a>
                 <a><fa-icon [icon]="faAcesso"></fa-icon>Acesso</a>
+            </div>
+        </details>
+        <details>
+            <summary (click)="toggle(true)"><fa-icon [icon]="faVendas"></fa-icon><span>Vendas</span></summary>
+            <div>
+                <a routerLink="/cadCliente"><fa-icon [icon]="faCliente"></fa-icon>Clientes</a>
+                <a><fa-icon [icon]="faAcesso"></fa-icon>Pedidos</a>
             </div>
         </details>
     </nav>

@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:5px;
+    gap:8px;
     hr{
         width:100%;
         border:1px var(--grey-color-300) solid;
@@ -141,6 +141,11 @@
         span{
           display:block;
           color:var(--font-color-default);
+      }
+      details{
+        summary{
+          justify-content: flex-start;
+        }
       }
     }
     .profile{
