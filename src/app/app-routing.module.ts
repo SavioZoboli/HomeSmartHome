@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { NotFoundComponent } from './pages/error/not-found/not-found.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CadClienteComponent } from './pages/vendas/cad-cliente/cad-cliente.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'auth',pathMatch:'full'},
@@ -12,6 +13,9 @@ const routes: Routes = [
 
   //Dashboard geral
   {path:'dashboard',component:DashboardComponent},
+
+  //Páginas de cadastro de clientes
+  {path:'cadCliente',component:CadClienteComponent},
 
   //Todas as requisições que não encontrare um caminho, vão para a página de erro 404
   {path:'**',pathMatch:'full',component:NotFoundComponent},
