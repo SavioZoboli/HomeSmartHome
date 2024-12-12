@@ -32,6 +32,9 @@ import { FormCadClienteComponent } from './pages/vendas/cad-cliente/form-cad-cli
 import { ReportModulosClienteComponent } from './pages/vendas/cad-cliente/report-modulos-cliente/report-modulos-cliente.component';
 import { FormCadUsuarioComponent } from './pages/vendas/cad-cliente/form-cad-usuario/form-cad-usuario.component';
 import { AquahubDashboardComponent } from './modulos/aquahub/aquahub-dashboard/aquahub-dashboard.component';
+import { SparmeterDashboardComponent } from './modulos/sparkmeter/sparmeter-dashboard/sparmeter-dashboard.component';
+import { GoodlockDashboardComponent } from './modulos/goodlock/goodlock-dashboard/goodlock-dashboard.component';
+import { ComfyhomeDashboardComponent } from './modulos/comfyhome/comfyhome-dashboard/comfyhome-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import { AquahubDashboardComponent } from './modulos/aquahub/aquahub-dashboard/a
     FormCadClienteComponent,
     ReportModulosClienteComponent,
     FormCadUsuarioComponent,
-    AquahubDashboardComponent
+    AquahubDashboardComponent,
+    SparmeterDashboardComponent,
+    GoodlockDashboardComponent,
+    ComfyhomeDashboardComponent
   ],
   imports: [
     BrowserModule,

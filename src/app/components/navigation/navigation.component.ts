@@ -76,21 +76,21 @@ export class NavigationComponent {
       nome:'Sparkmeter',
       codigo:'SPK',
       tipo:TipoMenu.DASHBOARD,
-      rota:'/sparkmeter',
+      rota:'/sparkmeter/dashboard',
       icone:faBolt
     },{
       id:1,
       nome:'GoodLock',
       codigo:'GLK',
       tipo:TipoMenu.DASHBOARD,
-      rota:'/goodlock',
+      rota:'/goodlock/dashboard',
       icone:faLock
     },{
       id:1,
-      nome:'ComfyHouse',
+      nome:'ComfyHome',
       codigo:'CFH',
       tipo:TipoMenu.DASHBOARD,
-      rota:'/comfyhouse',
+      rota:'/comfyhome/dashboard',
       icone:faHandHoldingHeart
     },{
       id:1,

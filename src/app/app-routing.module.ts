@@ -7,6 +7,9 @@ import { NotFoundComponent } from './pages/error/not-found/not-found.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CadClienteComponent } from './pages/vendas/cad-cliente/cad-cliente.component';
 import { AquahubDashboardComponent } from './modulos/aquahub/aquahub-dashboard/aquahub-dashboard.component';
+import { SparmeterDashboardComponent } from './modulos/sparkmeter/sparmeter-dashboard/sparmeter-dashboard.component';
+import { GoodlockDashboardComponent } from './modulos/goodlock/goodlock-dashboard/goodlock-dashboard.component';
+import { ComfyhomeDashboardComponent } from './modulos/comfyhome/comfyhome-dashboard/comfyhome-dashboard.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'auth',pathMatch:'full'},
@@ -16,10 +19,24 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
 
   //AquaHub
-  //Tratado em outro módulo, rota abaixo envia o pacote de roteamento para o roteamento
-  //Do aquahub module
+  //Utiliza o children para trabalhar dentro do módulo do AquaHub
   {path:'aquahub',children:[
     {path:'dashboard',component:AquahubDashboardComponent}
+  ]},
+  //Sparkmeter
+  //Utiliza o children para trabalhar dentro do módulo do AquaHub
+  {path:'sparkmeter',children:[
+    {path:'dashboard',component:SparmeterDashboardComponent}
+  ]},
+  //GoodLock
+  //Utiliza o children para trabalhar dentro do módulo do AquaHub
+  {path:'goodlock',children:[
+    {path:'dashboard',component:GoodlockDashboardComponent}
+  ]},
+  //ComfyHome
+  //Utiliza o children para trabalhar dentro do módulo do AquaHub
+  {path:'comfyhome',children:[
+    {path:'dashboard',component:ComfyhomeDashboardComponent}
   ]},
 
   //Páginas de cadastro de clientes
