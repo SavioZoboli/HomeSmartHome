@@ -64,22 +64,35 @@
     details{
       width: 80%;
       padding:5px;
+      transition-duration: 0.2s;
+        border-radius: 5px;
       summary{
         list-style: none;
         display: flex;
         align-items: center;
         justify-content: center;
         gap:5px;
+        &.active{
+          background-color: var(--primary-color-400);
+          fa-icon, span{
+              color:var(--white) !important;
+          }
+      }
         span{
           font-size: 0.7em;
         }
       }
       &[open]{
         border-left:1px var(--primary-color-400) solid;
+        border-radius: 0;
         summary *{
           color:var(--primary-color-400);
         }
       }
+      &:not([open]):hover{
+        background-color: var(--secundary-color-300);
+        cursor: pointer;
+    }
     }
   }
   .profile {
