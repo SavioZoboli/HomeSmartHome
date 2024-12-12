@@ -1,0 +1,27 @@
+.form-controls{
+    display: flex;
+    gap:20px;
+}
+
+.form-row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:15px;
+}
+
+.small{
+    width:100px;
+}
+
+.medium{
+    width:250px;
+}
+
+.large{
+    width:400px;
+}
+
+mat-hint{
+    font-size: 0.7em;
+}

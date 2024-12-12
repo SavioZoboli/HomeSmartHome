@@ -1,0 +1,45 @@
+<table [cellSpacing]="0">
+    <thead>
+      <th>Ação</th>
+      <th>Login</th>
+      <th>Tipo</th>
+      <th>Data Criação</th>
+      <th>Situação</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <button class="fab"><fa-icon [icon]="faEditar"></fa-icon></button>
+          <button class="fab">
+            <fa-icon [icon]="faDesativar"></fa-icon>
+          </button>
+        </td>
+        <td>savio.zoboli</td>
+        <td>Administrador</td>
+        <td>10/05/2023</td>
+        <td><span class="situacao ok">Ativo</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <form [formGroup]="form">
+    <h3>Cadastrar usuários</h3>
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="medium">
+        <mat-label>Login</mat-label>
+        <input matInput type="text" formControlName="login"/>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Regra</mat-label>
+        <mat-select formControlName="regra">
+          <mat-option value="admin">Administrador</mat-option>
+          <mat-option value="normal">Normal</mat-option>
+          <mat-option value="visualizacao">Somente Visualização</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-checkbox formControlName="ativo">Ativo</mat-checkbox>
+    </div>
+    <div class="form-controls">
+      <button class="cta-form green" [disabled]="form.invalid">Salvar</button>
+      <button class="cta-form red">Cancelar</button>
+    </div>
+  </form>

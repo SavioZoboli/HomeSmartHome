@@ -1,0 +1,36 @@
+
+table{
+    width:100%;
+    thead{
+        th{
+            text-align: left;
+            font-family: var(--font-face-title);
+            color:var(--font-color-default);
+            border-bottom:1px var(--grey-color-300) solid;
+            padding:5px;
+        }
+    }
+    tbody{
+        td{
+            font-family: var(--font-face-default);
+            color:var(--font-color-discrete);
+            padding:10px;
+            .fab{
+                margin-right:10px;
+            }
+        }
+        .situacao{
+            padding:8px;
+            border-radius: 10px;
+            &.ok{
+                color:var(--success-color-700);
+            }
+            &.warn{
+                color:var(--warn-color-700);
+            }
+            &.err{
+                color:var(--error-color-700);
+            }
+        }
+    }
+}
